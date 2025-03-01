@@ -56,19 +56,36 @@
             
 # Practicing Inheritance
 
+# class Parent:
+
+#     def __init__(self,name):
+#         self.name = name
+
+# class Child(Parent):
+
+#     def __init__(self,name,age):
+#         super().__init__(name)
+#         self.age = age
+
+# c = Child("Abubakr", 27)
+# print (c.name)
+
+# Practicing method inheritance
+
 class Parent:
 
-    def __init__(self,name):
-        self.name = name
+    def greet(self):
+        return "Hello from parents"
 
 class Child(Parent):
 
-    def __init__(self,name,age):
-        super().__init__(name)
-        self.age = age
+    def greet(self):
+        parent_message = super().greet()
+        return (f"{parent_message} and Hello from child")
 
-c = Child("Abubakr", 27)
-print (c.name)
+
+c=Child()
+print (c.greet())
 
             
 
