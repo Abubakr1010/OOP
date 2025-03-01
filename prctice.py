@@ -38,22 +38,38 @@
 
 # Creating Metaclass
 
-class Car(type):
-    def __new__(cls,name,base,attr):
+# class Car(type):
+#     def __new__(cls,name,base,attr):
      
-        if 'name' not in attr:
-                raise Exception(f"if 'name' attribute not found in{name} not found")
-        else:
-            return super().__new__(cls,name,base,attr)
+#         if 'name' not in attr:
+#                 raise Exception(f"if 'name' attribute not found intes{name} not found")
+#         else:
+#             return super().__new__(cls,name,base,attr)
         
 
-class Manual(metaclass=Car):
-     name = "honda"
+# class Manual(metaclass=Car):
+#      name = "honda"
 
-car = Manual()
-print(car.name)
+# car = Manual()
+# print(car.name)
 
             
+# Practicing Inheritance
+
+class Parent:
+
+    def __init__(self,name):
+        self.name = name
+
+class Child(Parent):
+
+    def __init__(self,name,age):
+        super().__init__(name)
+        self.age = age
+
+c = Child("Abubakr", 27)
+print (c.name)
+
             
 
 
