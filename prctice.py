@@ -72,20 +72,65 @@
 
 # Practicing method inheritance
 
-class Parent:
+# class Parent:
 
-    def greet(self):
-        return "Hello from parents"
+#     def greet(self):
+#         return "Hello from parents"
 
-class Child(Parent):
+# class Child(Parent):
 
-    def greet(self):
-        parent_message = super().greet()
-        return (f"{parent_message} and Hello from child")
+#     def greet(self):
+#         parent_message = super().greet()
+#         return (f"{parent_message} and Hello from child")
 
 
-c=Child()
-print (c.greet())
+# c=Child()
+# print (c.greet())
+
+#Practicing Polymorphsim
+
+# class Car:
+
+#     def __init__(self,name,model):
+#         self.name = name
+#         self.model = model
+
+# class Bikes:
+    
+#     def __init__(self,name,model):
+#         self.name = name
+#         self.model = model
+
+
+# c = Car("honda",2025)
+# b = Bikes("yamaha",2024)
+
+# print (c)
+# print (b)
+    
+
+#Incapsulation
+
+class Student:
+
+    def __init__(self,name,age):
+        self.__name = name
+        self.__age = age
+
+    def get_age(self):
+        return self.__age
+
+    def set_age(self,age):
+        self.__age= age
+
+
+s = Student("Alice", 20)
+print (s.get_age())
+s.set_age(45)
+print(s.get_age())
+
+    
+        
 
             
 
